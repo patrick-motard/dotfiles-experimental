@@ -1,0 +1,12 @@
+export HISTSIZE=100000 # max events for internal history
+export SAVEHIST=100000 # max events in history file
+export HISTFILE="${ZDOTDIR}/.zhistory"
+
+setopt SHARE_HISTORY
+
+autoload -U compinit; compinit
+
+source $ZDOTDIR/aliases.zsh
+
+# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
+export PROMPT="%~ $ "
