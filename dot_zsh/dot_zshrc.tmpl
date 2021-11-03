@@ -26,4 +26,8 @@ export PROMPT="%~ $ "
 # https://developer.fedoraproject.org/start/sw/web-app/rails.html
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export PATH="$PATH:$HOME/.rbenv/plugins/ruby-build/bin"
 {{ end -}}
+
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin/ssh-create"
