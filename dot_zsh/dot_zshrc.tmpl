@@ -21,6 +21,9 @@ precmd() {
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
 export PROMPT="%~ $ "
 
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github
+
 {{ if eq .chezmoi.os "linux" -}}
 # rbenv setup instructions:
 # https://developer.fedoraproject.org/start/sw/web-app/rails.html
