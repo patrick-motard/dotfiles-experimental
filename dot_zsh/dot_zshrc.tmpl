@@ -20,3 +20,10 @@ precmd() {
 
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
 export PROMPT="%~ $ "
+
+{{ if eq .chezmoi.os "linux" -}}
+# rbenv setup instructions:
+# https://developer.fedoraproject.org/start/sw/web-app/rails.html
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+{{ end -}}
