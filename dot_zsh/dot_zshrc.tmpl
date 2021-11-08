@@ -21,8 +21,9 @@ precmd() {
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
 export PROMPT="%~ $ "
 
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/github
+eval "$(ssh-agent -s)" &> /dev/null
+ssh-add -q ~/.ssh/github
+ssh-add -q ~/.ssh/lahey
 
 {{ if eq .chezmoi.os "linux" -}}
 # rbenv setup instructions:
