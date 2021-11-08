@@ -23,6 +23,7 @@ alias localbin="cd ~/.local/bin"
 
 # Git
 # nice shorthand,plus it gets rid of annoyingly launching ghostscript on accident.
+alias ga="git add"
 alias gaa="git add ."
 alias gau="git add -u" # git add unstaged only
 
