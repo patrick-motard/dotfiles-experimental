@@ -50,3 +50,9 @@ alias gs="git status"
 ## Chezmoi
 alias moi="chezmoi"
 alias gmoi="git -C ~/.local/share/chezmoi"
+
+# OSX Specific Configuration
+{{ if eq .chezmoi.os "darwin" -}}
+# Directories
+alias zen="cd ~/code/zendesk"
+{{end -}}
